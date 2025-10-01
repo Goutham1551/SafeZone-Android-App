@@ -85,7 +85,7 @@ fun GameScreen(modifier: Modifier = Modifier){
                 // Play "good touch" sound
                 if(isGirl) playSound(context, R.raw.girlgt)
                 else playSound(context,R.raw.boygt) // Assumes your file is good_touch.mp3
-            }
+            },
         )
 
         Spacer(modifier = Modifier.padding(16.dp))

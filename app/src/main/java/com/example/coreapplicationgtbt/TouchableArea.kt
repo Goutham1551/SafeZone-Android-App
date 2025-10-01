@@ -53,13 +53,13 @@ val girlPrivateAreas = listOf<TouchableArea>(
 val boyPrivateAreas = listOf<TouchableArea>(
     TouchableArea(
         name = "Lips",
-        rect = Rect(0.47f, 0.26f, 0.54f, 0.3f),
+        rect = Rect(0.44f, 0.26f, 0.54f, 0.3f),
         isPrivate = true
     ),
     TouchableArea(
         name = "Chest",
         // Rect: left, top, right, bottom as fractions of the image
-        rect = Rect(0.4f, 0.35f, 0.625f, 0.45f),
+        rect = Rect(0.37f, 0.38f, 0.625f, 0.45f),
         isPrivate = true
     ),
     TouchableArea(
