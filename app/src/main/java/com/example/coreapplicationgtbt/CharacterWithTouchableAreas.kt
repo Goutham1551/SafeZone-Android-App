@@ -2,7 +2,6 @@
 
 package com.example.coreapplicationgtbt
 
-import android.annotation.SuppressLint
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.Box
@@ -15,7 +14,6 @@ import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 
-@SuppressLint("UnusedBoxWithConstraintsScope")
 @Composable
 fun CharacterWithTouchableAreas(
     modifier: Modifier = Modifier,
@@ -24,15 +22,18 @@ fun CharacterWithTouchableAreas(
     onPrivateAreaTouched: (TouchableArea) -> Unit,
     onSafeAreaTouched: () -> Unit
 ) {
+    // BoxWithConstraints is still needed to provide a max size for the inner Box
     BoxWithConstraints(modifier = modifier) {
-        
-        val boxWidthPx = constraints.maxWidth.toFloat()
-        val boxHeightPx = constraints.maxHeight.toFloat()
-
         Box(
             modifier = Modifier
                 .fillMaxSize()
                 .pointerInput(Unit) {
+                    // 👇 THIS IS THE KEY CHANGE 👇
+                    // 'this.size' gives us the pixel size of the Box this modifier
+                    // is attached to. This is a more direct approach inside pointerInput.
+                    val boxWidthPx = this.size.width.toFloat()
+                    val boxHeightPx = this.size.height.toFloat()
+
                     detectTapGestures { offset ->
                         // Protect against division by zero, just in case.
                         if (boxWidthPx == 0f || boxHeightPx == 0f) return@detectTapGestures
