@@ -16,8 +16,7 @@ Here's a look at the SafeZone app in action:
 ### 🎥 App Demo Video
 A short video demonstrating the app's features and interactive touch detection.
 
-[![Watch the video](https://placehold.co/800x450/78909C/FFFFFF?text=Click+to+Watch+App+Demo)](https://www.youtube.com/)  
-*(Hint: Replace the placeholder link with your actual unlisted YouTube demo video.)*
+[![Watch the SafeZone App Demo](https://github.com/user-attachments/assets/8c814b33-6b0c-4fbe-8e93-f4574f2abba5)](https://github.com/user-attachments/assets/4d8f166b-7b4e-443e-bbc8-d9481ad35b1f)
 
 ---
 
